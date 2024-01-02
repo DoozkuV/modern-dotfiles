@@ -1,5 +1,5 @@
 # See https://wiki.hyprland.org/Configuring/Monitors/
-monitor=DP-1,1920x1080@165,0x0,1
+monitor=eDP-1,1920x1080@60,0x0,1
 monitor=,preferred,auto,1,mirror,eDP-1
 
 $hyprPath=~/.config/hypr
@@ -15,8 +15,6 @@ source=$hyprPath/layout.conf
 
 source=$hyprPath/binds.conf
 
-source=$hyprPath/workspace-rules.conf
-
 # INSERT CUSTOM CHANGES HERE
-unbind = SUPER,RETURN
-bind = SUPER, RETURN, exec, alacritty # DESKTOP CHANGE
+unbind = SUPER, W
+bind = SUPER, W, killactive
