@@ -1,0 +1,9 @@
+#!/bin/sh
+
+image_path="/home/doozku/Pictures/Wallpapers/kame-house.jpg"
+
+swww init
+
+swww img -t grow --transition-duration 2 --transition-fps 60 --transition-pos 0.6,0.6 "$image_path"
+
+
