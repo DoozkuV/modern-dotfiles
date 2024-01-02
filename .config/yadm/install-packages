@@ -1,0 +1,45 @@
+#!/bin/sh
+
+echo "Starting package installation."
+echo "Checking for yay installation." 
+if ! pacman -Qi "yay" > /dev/null 2>&1; then 
+    echo "Installing yay."
+    git clone https://aur.archlinux.org/yay.git 
+    cd yay 
+    sudo makepkg -si
+    cd ..
+    sudo rm -r yay 
+else 
+    echo "Yay already installed."
+fi
+
+# File containing the list of required packages
+config_dir="${XDG_CONFIG_HOME:-$HOME/.config}"
+package_file="$config_dir/yadm/required-packages.txt"
+
+# Check if the package file exists
+if [ ! -f "$package_file" ]; then
+    echo "Error: $package_file not found."
+    exit 1
+fi
+
+# Read the list of required packages from the file
+required_packages=$(cat "$package_file")
+
+packages_to_install=""
+
+# Check if each package is installed
+for package in $required_packages; do
+    if ! pacman -Qi "$package" > /dev/null 2>&1; then
+        packages_to_install="$packages_to_install $package"
+    fi
+done
+
+if [ -n "$packages_to_install" ]; then
+    yay -Sy $packages_to_install
+else
+    echo "No packages to install."
+fi
+
+echo "Finishing package installation."
+

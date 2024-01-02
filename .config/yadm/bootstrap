@@ -1,7 +1,13 @@
 #!/bin/sh
 
+echo "Starting Bootstrap." 
+config_dir="${XDG_CONFIG_HOME:-$HOME/.config}"
+boostrap_dir="$config_dir/yadm"
+
+# Run the install packages script
+"$boostrap_dir/install-packages"
+
 # Sym-link scripts
-echo "Sym-linking Scripts" 
-sudo echo "Super user access required..."
-scripts_dir="${XDG_CONFIG_HOME:-$HOME/.config/scripts}"
-sudo ln -s "$scripts_dir"/* /usr/bin/
+echo "Sym-linking Scripts." 
+sudo ln -sf "$config_dir"/scripts/* /usr/bin/
+echo "Sym-linking Done." 

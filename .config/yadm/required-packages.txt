@@ -1,0 +1,12 @@
+syncthing
+hyprland
+neovim
+rofi
+rofi-calc
+fd
+bat
+ripgrep
+alacritty
+swww
+waybar
+fish
