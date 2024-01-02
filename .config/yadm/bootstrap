@@ -3,5 +3,5 @@
 # Sym-link scripts
 echo "Sym-linking Scripts" 
 sudo echo "Super user access required..."
-scripts_dir="${XDG_CONFIG_HOME:-$HOME/.config}"
+scripts_dir="${XDG_CONFIG_HOME:-$HOME/.config/scripts}"
 sudo ln -s "$scripts_dir"/* /usr/bin/
