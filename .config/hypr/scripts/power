@@ -1,5 +1,5 @@
 #!/bin/bash 
-chosen=$(echo -e "[Cancel]\nLogout\nShutdown\nReboot\nSuspend\nHibernate\nHybrid-sleep\nSuspend-then-hibernate" | rofi -dmenu)
+chosen=$(echo -e "[Cancel]\nLogout\nShutdown\nReboot\nSuspend\nHibernate\nHybrid-sleep\nSuspend-then-hibernate" | rofi -dmenu -i)
 
 if [[ $chosen = "Logout" ]]; then
     hyprctl dispatch exit 
