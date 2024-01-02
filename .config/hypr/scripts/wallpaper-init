@@ -1,9 +1,26 @@
 #!/bin/sh
 
-image_path="/home/doozku/Pictures/Wallpapers/kame-house.jpg"
+# wallpapers_path="/home/doozku/Pictures/Wallpapers/kame-house.jpg"
+wallpapers_path="/home/doozku/Pictures/Wallpapers/"
+
+# Get a list of image files in folder and it's sub-directories
+image_files=($(find "$wallpapers_path" -type f -iregex '.*\.\(jpg\|jpeg\|png\|gif\|bmp\)'))
+
+# Check if any image files were found
+if [ ${#image_files[@]} -eq 0 ]; then
+    echo "Error: No image files found in the specified directory"
+    exit 1
+fi
+
+# Get a random index to select a random image
+random_index=$((RANDOM % ${#image_files[@]}))
+
+random_image="${image_files[$random_index]}"
 
 swww init
 
-swww img -t grow --transition-duration 2 --transition-fps 60 --transition-pos 0.6,0.6 "$image_path"
+swww img -t grow --transition-duration 2 --transition-fps 60 --transition-pos 0.6,0.6 "$random_image"
+
+# swww img -t grow --transition-duration 2 --transition-fps 60 --transition-pos 0.6,0.6 "$wallpapers_path"
 
 
