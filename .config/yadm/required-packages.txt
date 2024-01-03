@@ -14,3 +14,8 @@ zathura
 zathura-pdf-mupdf
 obsidian
 btop
+mpv
+fzf
+ueberzugpp
+yt-dlp
+ytfzf
