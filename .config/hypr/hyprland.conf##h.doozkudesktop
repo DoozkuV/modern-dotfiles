@@ -20,3 +20,8 @@ source=$hyprPath/workspace-rules.conf
 # INSERT CUSTOM CHANGES HERE
 unbind = SUPER,RETURN
 bind = SUPER, RETURN, exec, alacritty # DESKTOP CHANGE
+unbind = SUPER, F
+bind = SUPER, F, exec, dolphin
+# Set GTK theme
+env = GTK_THEME,Breeze
+env = GTK_THEME_VARIANT,dark
