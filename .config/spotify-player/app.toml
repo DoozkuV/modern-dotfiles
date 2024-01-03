@@ -32,6 +32,6 @@ args = [
 [device]
 name = "spotify-player"
 device_type = "speaker"
-volume = 50
+volume = 70
 bitrate = 160
 audio_cache = false

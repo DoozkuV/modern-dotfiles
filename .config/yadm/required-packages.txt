@@ -10,3 +10,7 @@ alacritty
 swww
 waybar
 fish
+zathura
+zathura-pdf-mupdf
+obsidian
+btop
