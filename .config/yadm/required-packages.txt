@@ -19,3 +19,4 @@ fzf
 ueberzugpp
 yt-dlp
 ytfzf
+lf
