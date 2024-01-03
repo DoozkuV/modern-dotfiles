@@ -11,7 +11,7 @@ swww
 waybar
 fish
 zathura
-zathura-pdf-mupdf
+zathura-pdf-poppler
 obsidian
 btop
 mpv
