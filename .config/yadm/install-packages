@@ -1,6 +1,14 @@
 #!/bin/sh
 
 echo "Starting package installation."
+
+# Exit if arch is installed
+if ! cat /etc/os-release | grep -q 'arch'; then
+    echo "Arch not detected - skipping package installation."
+    exit 0
+fi
+
+# Confrim that yay is installed 
 echo "Checking for yay installation." 
 if ! pacman -Qi "yay" > /dev/null 2>&1; then 
     echo "Installing yay."

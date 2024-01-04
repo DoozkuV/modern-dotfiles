@@ -17,6 +17,4 @@ btop
 mpv
 fzf
 ueberzugpp
-yt-dlp
-ytfzf
 lf
