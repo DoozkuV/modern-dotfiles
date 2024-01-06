@@ -23,3 +23,9 @@ zsh
 dashbinsh
 zsh-autosuggestions
 zsh-syntax-highlighting
+xdg-desktop-portal-wlr
+pipewire
+wireplumber
+polkit-kde-agent
+qt5-wayland
+qt6-wayland
