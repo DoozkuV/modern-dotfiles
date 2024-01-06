@@ -18,3 +18,8 @@ mpv
 fzf
 ueberzugpp
 lf
+dash
+zsh
+dashbinsh
+zsh-autosuggestions
+zsh-syntax-highlighting

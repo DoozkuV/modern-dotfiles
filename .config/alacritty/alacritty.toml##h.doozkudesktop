@@ -13,9 +13,9 @@ size = 10.0
 [font.normal]
 family = "monospace"
 
-[shell]
-args = ["--login"]
-program = "/bin/fish"
+# [shell]
+# args = ["--login"]
+# program = "/bin/fish"
 
 [window]
 opacity = 0.75
