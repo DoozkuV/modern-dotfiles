@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "clock", "tray"],
+    "modules-right": ["custom/pomo", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "clock", "tray"],
 
     // Modules configuration
      "hyprland/workspaces": {
@@ -113,18 +113,15 @@
         "on-click": "pavucontrol"
     },
 
-//     "custom/media": {
-//         "format": "{icon} {}",
-//         "return-type": "json",
-//         "max-length": 40,
-//         "format-icons": {
-//             "spotify": "",
-//             "default": "🎜"
-//         },
-//         "escape": true,
-//         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-//         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-//     }
+    "custom/pomo": {
+        "format": "{icon} {}",
+        "format-icons": {
+            "inactive": "",
+            "active": ""
+        },
+        "exec": "pomo status",
+        "interval": 1
+    }
 
 }
 

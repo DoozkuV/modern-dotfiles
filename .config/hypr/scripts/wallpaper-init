@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # wallpapers_path="/home/doozku/Pictures/Wallpapers/kame-house.jpg"
-wallpapers_path="/home/doozku/Pictures/Wallpapers/"
+wallpapers_path="$HOME/Pictures/Wallpapers/"
 
 # Get a list of image files in folder and it's sub-directories
 image_files=($(find "$wallpapers_path" -type f -iregex '.*\.\(jpg\|jpeg\|png\|gif\|bmp\)'))
@@ -17,10 +17,8 @@ random_index=$((RANDOM % ${#image_files[@]}))
 
 random_image="${image_files[$random_index]}"
 
+# See the swww-init manpage
+# This modification is to make the wallpaper work on startup
 swww init
 
 swww img -t grow --transition-duration 2 --transition-fps 60 --transition-pos 0.6,0.6 "$random_image"
-
-# swww img -t grow --transition-duration 2 --transition-fps 60 --transition-pos 0.6,0.6 "$wallpapers_path"
-
-
