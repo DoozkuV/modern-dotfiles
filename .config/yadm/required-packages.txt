@@ -30,3 +30,4 @@ polkit-kde-agent
 qt5-wayland
 qt6-wayland
 tzupdate
+wezterm

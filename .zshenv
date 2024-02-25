@@ -1,6 +1,7 @@
 export BROWSER="firefox"
-export TERMINAL="alacritty"
+export TERMINAL="wezterm"
 export EDITOR="nvim"
+export VISUAL="nvim"
 
 export WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 export ZDOTDIR="$HOME/.config/zsh"

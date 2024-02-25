@@ -23,3 +23,6 @@ alias ll="ls -al"
 # lf aliases 
 alias lf="lfub"
 
+second_brain_path="$HOME/Documents/obsidian/second-brain"
+alias bv="cd $second_brain_path && nvim ."
+

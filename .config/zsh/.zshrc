@@ -102,3 +102,7 @@ eval "$(zoxide init zsh)"
 bindkey '^ ' autosuggest-accept
 bindkey '^ENTER' autosuggest-execute
 
+# Wallust themeing
+(cat ~/.cache/wallust/sequences &)
+
+
