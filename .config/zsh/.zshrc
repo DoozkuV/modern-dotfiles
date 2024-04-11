@@ -6,8 +6,7 @@ setopt autocd #cd without typing 'cd'
 setopt correctall #Auto correction of typed commands
 setopt hist_ignore_space # Ignore commands in history if prefixed with a space
 unsetopt beep
-bindkey -v
-export KEYTIMEOUT=1
+
 # End of lines configured by zsh-newuser-install
 
 PS1='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
@@ -21,12 +20,18 @@ compinit
 
 _comp_options+=(globdots) # Include hidden files 
 
-# Use vim keys in tab complete menu 
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
 
+# Set vim bindings only when not inside of emacs
+if [[ -z $INSIDE_EMACS ]]; then
+    bindkey -v
+    # Use vim keys in tab complete menu 
+    bindkey -M menuselect 'h' vi-backward-char
+    bindkey -M menuselect 'k' vi-up-line-or-history
+    bindkey -M menuselect 'l' vi-forward-char
+    bindkey -M menuselect 'j' vi-down-line-or-history
+fi
+
+export KEYTIMEOUT=1
 # Change cursor shape for different vi modes 
 # Credit to luke smith for a lot of these configs
 zle-keymap-select ()
@@ -74,6 +79,10 @@ vterm_printf() {
     fi
 }
 
+# Configure zsh to work with EAT Shell
+[ -n "$EAT_SHELL_INTEGRATION_DIR" ] && \
+    source "$EAT_SHELL_INTEGRATION_DIR/zsh"
+
 # Uses Zoxide and then calls what is essentially the 'fv' alias
 zv() {
     cd "$(zoxide query $1)" && fd --type f --hidden --exclude .git |
@@ -94,6 +103,9 @@ bindkey '^e' edit-command-line
 # Setup zoxide
 eval "$(zoxide init zsh)"
 
+# Setup direnv
+eval "$(direnv hook zsh)"
+
 # Setup zsh-syntax-highlighting and auto-completion
 . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -101,8 +113,6 @@ eval "$(zoxide init zsh)"
 # Set auto-completion keybindings 
 bindkey '^ ' autosuggest-accept
 bindkey '^ENTER' autosuggest-execute
-
-# Wallust themeing
-(cat ~/.cache/wallust/sequences &)
+bindkey '^F' autosuggest-execute
 
 

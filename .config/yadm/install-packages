@@ -9,14 +9,15 @@ if ! cat /etc/os-release | grep -q 'arch'; then
 fi
 
 # Confrim that yay is installed 
+echo "Arch Linux detected - installing default packages" 
 echo "Checking for yay installation." 
 if ! pacman -Qi "yay" > /dev/null 2>&1; then 
     echo "Installing yay."
     git clone https://aur.archlinux.org/yay.git 
     cd yay 
-    sudo makepkg -si
+    makepkg -si
     cd ..
-    sudo rm -r yay 
+    rm -rf yay 
 else 
     echo "Yay already installed."
 fi
@@ -33,7 +34,6 @@ fi
 
 # Read the list of required packages from the file
 required_packages=$(cat "$package_file")
-
 packages_to_install=""
 
 # Check if each package is installed

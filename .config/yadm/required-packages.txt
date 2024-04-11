@@ -9,7 +9,6 @@ ripgrep
 alacritty
 swww
 waybar
-fish
 zathura
 zathura-pdf-poppler
 obsidian
@@ -19,8 +18,8 @@ fzf
 ueberzugpp
 lf
 dash
-zsh
 dashbinsh
+zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
 xdg-desktop-portal-wlr
@@ -29,5 +28,5 @@ wireplumber
 polkit-kde-agent
 qt5-wayland
 qt6-wayland
-tzupdate
-wezterm
+mako
+slurp grim
