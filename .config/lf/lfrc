@@ -111,6 +111,10 @@ cmd zi ${{
 	lf -remote "send $id cd \"$result\""
 }}
 
+cmd fv ${{
+	fd --type f --hidden --exclude .git | fzf -m --bind one:accept --preview 'bat --style numbers,changes --color=always {} | head -500' | xargs -r nvim
+}}
+
 # Bindings
 map <c-f> $lf -remote "send $id select \"$(fzf)\""
 map g top
@@ -140,9 +144,8 @@ map <c-e> bulkrename
 map z push :z<space>
 map Z zi
 
-# map <c-e> down
-# map <c-y> up
-map V push :!nvim<space>
+map V fv
+map v $$EDITOR
 
 map W $setsid -f $TERMINAL >/dev/null 2>&1
 
