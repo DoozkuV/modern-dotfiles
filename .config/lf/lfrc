@@ -122,6 +122,7 @@ map D delete
 map E extract
 map C copyto
 map R moveto
+map U clear
 
 map <c-n> push :mkdir<space>
 map + push :mkdir<space>

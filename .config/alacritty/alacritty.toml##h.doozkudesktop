@@ -19,3 +19,4 @@ family = "monospace"
 
 [window]
 opacity = 0.75
+# vim: set filetype=toml:

@@ -36,3 +36,5 @@ bind = ,XF86Launch4, exec, profile-toggle
 #
 # SET THEMES
 env = GTK_THEME,Catppuccin-Mocha-Standard-Pink-Dark:dark
+
+# vim: set filetype=hyprlang:
