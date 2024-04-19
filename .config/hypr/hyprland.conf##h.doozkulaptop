@@ -17,6 +17,7 @@ source=$hyprPath/workspace-rules.conf
 
 source=$hyprPath/startup.conf
 
+
 # CUSTOM STUFF BEGINS HERE
 unbind = SUPER, W
 bind = SUPER, W, killactive
@@ -37,4 +38,5 @@ bind = ,XF86Launch4, exec, profile-toggle
 # SET THEMES
 env = GTK_THEME,Catppuccin-Mocha-Standard-Pink-Dark:dark
 
-# vim: set filetype=hyprlang:
+
+# vim: set filetype=markdown:

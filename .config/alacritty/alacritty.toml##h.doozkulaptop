@@ -1,6 +1,6 @@
-import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
-]
+# import = [
+#   "~/.config/alacritty/catppuccin-mocha.toml"
+# ]
 [bell]
 animation = "EaseOutExpo"
 color = "#ffffff"
@@ -21,6 +21,6 @@ args = ["--login"]
 program = "/bin/zsh"
 
 [window]
-opacity = 0.75
+opacity = 0.00
 
 # vim: set filetype=toml:

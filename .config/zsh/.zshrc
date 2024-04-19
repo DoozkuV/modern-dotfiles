@@ -116,3 +116,5 @@ bindkey '^ENTER' autosuggest-execute
 bindkey '^F' autosuggest-execute
 
 
+# Load wal themes
+cat $HOME/.cache/wal/sequences
