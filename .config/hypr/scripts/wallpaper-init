@@ -21,6 +21,4 @@ random_image="${image_files[$random_index]}"
 # This modification is to make the wallpaper work on startup
 swww init && swww img -t grow --transition-duration 2 --transition-fps 60 --transition-pos 0.6,0.6 "$random_image"
 
-wal -i random_image
-
 

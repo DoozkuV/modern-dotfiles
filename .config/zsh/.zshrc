@@ -115,6 +115,10 @@ bindkey '^ ' autosuggest-accept
 bindkey '^ENTER' autosuggest-execute
 bindkey '^F' autosuggest-execute
 
+# Set up fzf integration
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
 
 # Load wal themes
 cat $HOME/.cache/wal/sequences
