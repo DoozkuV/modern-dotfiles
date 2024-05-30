@@ -7,7 +7,7 @@ export WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 export ZDOTDIR="$HOME/.config/zsh"
 
 # export TODO_FILE="$HOME/Documents/Organization"
-export GOPATH="$HOME/Projects/go"
+# export GOPATH="$HOME/Projects/go"
 
 # Emacs
 # Make LSP more efficient

@@ -37,6 +37,9 @@ bind = ,XF86Launch4, exec, profile-toggle
 #
 # SET THEMES
 env = GTK_THEME,Catppuccin-Mocha-Standard-Pink-Dark:dark
+# env = HYPRCURSOR_THEME,theme_Catppuccin-Mocha-Rosewater-Cursors
+# env = HYPRCURSOR_SIZE,40
 
 
-# vim: set filetype=markdown:
+
+# vim: set filetype=hyprlang:

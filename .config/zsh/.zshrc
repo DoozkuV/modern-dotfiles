@@ -116,6 +116,10 @@ bindkey '^ENTER' autosuggest-execute
 bindkey '^F' autosuggest-execute
 
 # Set up fzf integration
+# This adds the following keybinds:
+# Ctrl+t - List files and folders and inserts them in prompt
+# Ctrl+r - Search history of shell commands
+# Alt+c - Fuzzy change directory
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 

@@ -25,3 +25,5 @@ bind = SUPER, F, exec, dolphin
 # Set GTK theme
 env = GTK_THEME,Breeze
 env = GTK_THEME_VARIANT,dark
+#
+# vim: set filetype=hyprlang:

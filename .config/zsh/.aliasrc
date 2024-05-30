@@ -5,6 +5,8 @@ alias vim="nvim"
 alias v="nvim"
 
 alias nnote="nvim -c ObsidianQuickSwitch"
+alias nday="nvim -c ObsidianToday"
+
 alias ngit="nvim -c Neogit"
 # This alias allows us to fzf with previews to open neovim 
 # The 'head -500' command is there to prevent files that are

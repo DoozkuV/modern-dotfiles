@@ -1,5 +1,4 @@
-
-# Basic vars
+# --- VARIABLES ---
 set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
@@ -14,7 +13,7 @@ set info size:time
 set number
 set relativenumber
 
-# cmds/functions
+# --- COMMANDS AND FUNCTIONS ---
 cmd open ${{
     case $(file --mime-type "$(readlink -f $f)" -b) in
 	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
@@ -115,11 +114,15 @@ cmd fv ${{
 	fd --type f --hidden --exclude .git | fzf -m --bind one:accept --preview 'bat --style numbers,changes --color=always {} | head -500' | xargs -r nvim
 }}
 
-# Bindings
+# Ripdrag integration
+cmd drag $ripdrag $fx
+
+# --- BINDINGS --- 
 map <c-f> $lf -remote "send $id select \"$(fzf)\""
 map g top
 map D delete
-map E extract
+# map E extract
+map E drag
 map C copyto
 map R moveto
 map U clear
@@ -151,4 +154,4 @@ map v $$EDITOR
 map W $setsid -f $TERMINAL >/dev/null 2>&1
 
 map Y $printf "%s" "$fx" | wl-copy
-# vim: set filetype=sh:
+# vim: set filetype=bash:
